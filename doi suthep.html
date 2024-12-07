@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำสถานที่: ดอยสุเทพ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- เริ่มเนื้อหาทั้งหมดใน body -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">เที่ยวไทย</div>
+            <div class="nav-links">
+                <a href="/vscode/index.html">หน้าแรก</a>
+                <a href="#about">เมนูข่าวสาร</a>
+                <a href="#contact">ติดต่อ</a>
+                <a href="#admin" id="admin-link">สำหรับ admin</a>
+            </div>
+        </div>
+    </nav>
+    <div id="admin-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div class="modal-content" style="background-color: white; width: 300px; margin: 100px auto; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; margin-bottom: 20px;">เข้าสู่ระบบแอดมิน</h2>
+            
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="admin-username" style="display: block; margin-bottom: 5px;">ชื่อผู้ใช้:</label>
+                <input type="text" id="admin-username" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="admin-password" style="display: block; margin-bottom: 5px;">รหัสผ่าน:</label>
+                <input type="password" id="admin-password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            
+            <div id="login-error" style="color: red; text-align: center; margin-bottom: 15px;"></div>
+            
+            <button id="admin-login-btn" style="width: 100%; padding: 10px; background-color: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                เข้าสู่ระบบ
+            </button>
+        </div>
+    </div>
+    <div id="admin-panel" style="display: none; padding: 20px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 10px; margin: 20px;">
+        <h2>Admin Panel</h2>
+        <p>คุณสามารถเพิ่ม, ลบ หรือแก้ไขเนื้อหาได้</p>
+        <button id="add-section-btn" style="margin-bottom: 10px;">เพิ่มเนื้อหาใหม่</button>
+        <div id="editable-sections">
+            <!-- Sections ที่จะสามารถแก้ไขได้ -->
+            <div class="section" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                <div class="text-content">เนื้อหาตัวอย่าง 1</div>
+                <div class="edit-controls">
+                    <button class="edit-btn">แก้ไข</button>
+                    <button class="delete-btn">ลบ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Header -->
+    <header class="header-section">
+        <img src="https://www.dhakulchan.org/thecube/blog/wp-content/uploads/2021/04/วัดพระธาตุดอยสุเทพ.jpg" alt="วัดพระธาตุดอยสุเทพ" style="width: 100%; height: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover; z-index: -1; ">
+        <div class="text-left">ดอยสุเทพ</div>
+        <div class="text-right">
+            ดอยสุเทพ, เพชรเม็ดงามของเชียงใหม่, เป็นภูเขาที่สูงตระหง่าน<br>
+            และเป็นที่ตั้งของ วัดพระธาตุดอยสุเทพสัญลักษณ์แห่งศรัทธาและวัฒนธรรม<br>
+            ที่นี่เต็มไปด้วยทิวทัศน์ที่งดงามและบรรยากาศที่เงียบสงบ<br>
+            ทำให้ผู้มาเยือนรู้สึกถึงความสงบในจิตใจ<br>
+            พร้อมทั้งได้สัมผัสกับประวัติศาสตร์และความศักดิ์สิทธิ์ที่มีมาอย่างยาวนาน.
+        </div>
+    </header>
+    <section>
+        ⠀
+        ⠀
+        ⠀
+ <section>
+            ⠀
+            ⠀
+            ⠀
+    <!-- Section 2: Main Content -->
+    <section class="main-content">
+        <div class="image-container">
+            <img src="https://travelxpress.co.th/booking/wp-content/uploads/doisuthep-2.jpg" alt="ดอยสุเทพ">
+        </div>
+        <div class="text-content">
+            <h2>10 ข้อควรรู้ของพระธาตุดอยสุเทพ</h2>
+            <ol class="summary-list"> <!-- ใช้ ordered list เพื่อจัดเรียงข้อ -->
+                <li>
+                    พระธาตุดอยสุเทพ องค์พระบรมสารีริกธาตุถูกบรรจุไว้ใต้ดินไม่ใช้ด้านบนอย่างที่เข้าใจกัน...
+                </li>
+                <li>
+                    ห้ามสตรีเข้าใกล้องค์พระธาตุ เพราะคติทางพุทธศาสนาถือว่าสตรีผู้มีรอบเดือนนั้นเป็นสิ่งสกปรก...
+                </li>
+                <li>
+                    พระธาตุดอยสุเทพ ถือเป็นเขาพระสุเมรุของล้านนาแฝงความคิดเป็นฮินดูอยู่ในพุทธศาสนา...
+                </li>
+                <li>
+                    เป็นหนึ่งในเจดีย์ประจำปีเกิดของคนเกิดปีมะแม...
+                </li>
+                <li>
+                    ปัจจุบันบริเวณพระธาตุดอยสุเทพมีการเวียนเทียนกันตลอด...
+                </li>
+                <li>
+                    ในอดีตทุกวันวิสาขาบูชาของทุกปี ชาวเชียงใหม่จะเดินข้ามคืนขึ้นดอยสุเทพไปตักบาตร...
+                </li>
+                <li>
+                    บันไดนาคทางขึ้นพระธาตุเดิมเป็นนาคเศียรเดียวและมีบันได 173 ขั้น...
+                </li>
+                <li>
+                    ครูบาศรีวิชัยผู้ปฎิสังขรณ์พระธาตุดอยสุเทพเป็นผู้นำทางจิตวิญญาณของชาวล้านนา...
+                </li>
+                <li>
+                    พระธาตุดอยสุเทพผ่านแผ่นดินไหวมา 5 ครั้ง...
+                </li>
+                <li>
+                    ใครที่เรียนหรือเคยเรียนมหาวิทยาลัยเชียงใหม่คงต้องเคยผ่านการรับน้อง "ประเพณีลูกช้างขึ้นดอย"...
+                </li>
+            </ol>
+    
+            </p>
+        </div>
+    </section>
+
+    <section class="slider-section">
+        <div class="slider-content">
+            <h2>ภาพตัวอย่าง</h2>
+            <div class="main-content">
+                <div class="image-container2">
+                    <img src="https://travelxpress.co.th/booking/wp-content/uploads/doisuthep-2.jpg" alt="ดอยสุเทพ">
+                    <img src="https://www.matichonweekly.com/wp-content/uploads/2023/12/เจดีย์วัดพระธาตุดอยสุเทพ-scaled.jpg" alt="วัดพระธาตุดอยสุเทพ">
+                    <img src="https://www.silpa-mag.com/wp-content/uploads/2024/03/ภาพปก-พระธาตุดอยสุภาพ.jpg" alt="วัดดอยสุเทพ">
+                    <img src="https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5K8D2hSwJXdsg4TmYNgbdApcwD9ThmJhcJ25RPHtlmcTtPuEI7b.jpg" alt="วัดดอยสุเทพ">
+                    <img src="https://cbtthailand.dasta.or.th/upload-file-api/Resources/RelateAttraction/Images/RAT500506/1.jpeg" alt="วัดดอยสุเทพ">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn">Previous</button>
+                <button class="next-btn">Next</button>
+            </div>
+        </div>
+        <section class="history-section">
+            <h2>ประวัติความเป็นมา</h2>
+            <p>
+                เดินทางตามถนนห้วยแก้ว ผ่านอนุสาวรีย์ครูบาศรีวิชัย ไปตามทางคดเคี้ยวขึ้นเขา ระหว่างทางจะมองเห็นตัวเมืองเชียงใหม่อยู่เบื้องล่าง ระยะทางจากเชิงดอยถึงวัดประมาณ 11 กิโลเมตร ใช้เวลาประมาณครึ่งชั่วโมง วัดพระธาตุดอยสุเทพนี้เป็นปูชนียสถานคู่เมืองเชียงใหม่นับตั้งแต่โบราณกาล นักท่องเที่ยวซึ่งเดินทางมาที่จังหวัดนี้จะต้องขึ้นไปนมัสการพระบรมธาตุกันทุกคน ถ้าหากใครไม่ได้ขึ้นไปนมัสการแล้ว ถือเสมือนว่ายังมาไม่ถึงเชียงใหม่
+            </p>
+        
+            <div id="full-content" style="display: none;">
+                <p>
+                    ตามประวัติแห่งดอยสุเทพนั้นเชื่อกันว่า เดิมภูเขาแห่งนี้เป็นที่อยู่ของฤาษีนามว่า "สุเทวะ" ซึ่งตรงกับคำว่าสุเทพอันเป็นที่มาของชื่อดอยสูงแห่งนี้ โดยวัดพระธาตุดอยสุเทพนี้สร้างขึ้นเมื่อต้นพุทธศตวรรษที่ 19 ในสมัยพระเจ้ากือนาธรรมิกราช เจ้าหลวงเมืองเชียงใหม่องค์ที่ 6 เพื่อประดิษฐานพระบรมสารีริกธาตุที่ได้ทรงอัญเชิญมาจากเมืองศรีสัชนาลัย
+                </p>
+                <p>
+                    ตามตำนานเล่าว่า พระเจ้ากือนาธรรมิกราชทรงแยกพระบรมสารีริกธาตุไว้เป็นสองส่วน โดยอัญเชิญองค์หนึ่งบรรจุไว้ที่พระธาตุวัดสวนดอก ส่วนอีกองค์หนึ่งได้อัญเชิญขึ้นบนหลังช้างมงคล โดยพระเจ้ากือนาธรรมิกราชทรงตั้งจิตอธิษฐานเสี่ยงทายว่าหากช้างเชือกนั้นหยุดลงตรงที่ใดก็จะให้สร้างพระธาตุขึ้น ณ ที่แห่งนั้น ซึ่งช้างเชือกดังกล่าวได้มาหยุดลงตรงยอดดอยสุเทพแห่งนี้ โดยทำทักษิณาวรรตสามรอบก่อนที่จะล้มลง (ตาย) ดังนั้นพระเจ้ากือนาธรรมิกราชจึงทรงรับสั่งให้สร้างพระบรมธาตุอันเป็นที่ประดิษฐานองค์พระบรมสารีริกธาตุ ณ ยอดดอยสุเทพ อยู่คู่ฟ้าคู่ดินเชียงใหม่มานับแต่นั้น
+                </p>
+                <p>
+                    งานประเพณีเตียวขึ้นดอยเพื่อสักการะพระธาตุดอยสุเทพจัดเป็นประจำทุกปี โดยมีขึ้นก่อนหน้าวันวิสาขบูชา 1 คืน ในงานจะมีขบวนแห่น้ำสำหรับสรงพระธาตุโดยมีพระสงฆ์ สามเณร และพุทธศาสนิกชนจากชุมชนต่าง ๆ มาร่วมขบวนแห่ขึ้นดอยเป็นจำนวนมาก
+                </p>
+                <p>
+                    ความเชื่อและวิธีการบูชา เชื่อกันว่าหากมาสักการะและอธิษฐานขอพรพระธาตุดอยสุเทพ จะมีแต่ความสำเร็จสมหวังดังปรารถนา แคล้วคลาด ผ่านอุปสรรคนานาไปได้ ในการสักการะพระธาตุนั้น ควรเตรียมข้าวตอก ดอกไม้ ธูปเทียนแล้วเดินเวียนขวา 3 รอบ พร้อมกล่าวคำนมัสการพระธาตุ โดยตั้งจิตอธิษฐานขอให้สมหวังในสิ่งที่ปรารถนา และควรไหว้พระธาตุให้ครบทั้ง 4 ทิศ ซึ่งให้อานิสงส์ที่ต่างกัน คือ ทิศเหนือขอให้มีปัญญาดุจพระจัทร์เพ็ญ ทิศใต้ ขอให้ได้เป็นพระภิกษุสงฆ์ได้บวชในบวรพุทธศาสนา ทิศตะวันออกขอให้ได้ขึ้นสวรรค์ ทิศตะวันตกเป็นการเคารพบูชาสูงสุดต่อพระธาตุ สิ่งที่ไม่ควรพลาดเมื่อได้มานมัสการพระธาตุดอยสุเทพแล้ว ควรมากราบอนุสาวรีย์ครูบาศรีวิชัย นักบุญแห่งล้านนา ที่ประดิษฐานอยู่ตรงเชิงดอยสุเทพเพื่อความเป็นสิริมงคลอีกด้วย
+                </p>
+            </div>
+        
+            <button id="read-more-btn">อ่านเพิ่มเติม</button>
+        </section>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>เที่ยวไทย@mysite.com</p>
+                <p>123-456-7890</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6L-DIOnyf69iQC_n2psHMqgcvAXFG266Avw&s" alt="Instagram"></a>
+                <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+</section>
+
+</section>
+    <script src="script.js"></script>
+</body>
+</html>

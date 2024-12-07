@@ -1,0 +1,384 @@
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background for the modal */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 12px; /* More rounded corners */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Maximum width for larger screens */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    
+    /* Centering the modal vertically and horizontally */
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%); /* Move it back by half its own width and height */
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000; /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.management-options {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+}
+
+.management-button {
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Get the block to sit next to each other */
+    font-size: 16px; /* Increase font size */
+    border-radius: 5px; /* Rounded corners */
+    transition-duration: 0.3s; /* Smooth transition for hover effect */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green for edit button */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red for delete button */
+}
+
+.add-button {
+    background-color: #2196F3; /* Blue for add button */
+}
+
+.management-button:hover {
+    opacity: 0.9; /* Slightly transparent on hover for all buttons */
+}
+
+/* Add hover effects specifically for each button type */
+.edit-button:hover {
+    background-color: #45a049; /* Darker green on hover for edit button */
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover for delete button */
+}
+
+.add-button:hover {
+    background-color: #1976D2; /* Darker blue on hover for add button */
+}
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://blog.bangkokair.com/wp-content/uploads/2023/09/visit-chiang-mai-during-the-rainy-season-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 50px;
+    }
+    .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    }
+    .hero-content p {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 30px;
+        padding: 2px 16px;
+        width: 60%;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .search-bar:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .search-bar input {
+        flex: 1;
+        border: none;
+        font-size: 16px;
+        padding: 0;
+        outline: none;
+        color: #333;
+    }
+    
+    .search-bar input::placeholder {
+        color: #2a2a2a;
+    }
+    
+    .search-bar button {
+        transform: translate(15px);
+        background-color: #2563eb;
+        color: #fff;
+        border: none;
+        width: 50px; /* กำหนดความกว้าง */
+        height: 50px; /* กำหนดความสูงเท่ากับความกว้าง */
+        border-radius: 50%; /* ทำให้เป็นวงกลม */
+        font-size: 0; /* ซ่อนข้อความถ้ามี */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex; /* จัดไอคอนให้อยู่ตรงกลาง */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .search-bar button:hover {
+        background-color: #1d4ed8;
+        transform: translate(15px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+
+    }
+    
+    .search-bar button:active {
+        transform: translate(15px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-bar button svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        transition: fill 0.3s ease;
+    }
+    
+    .search-bar button:hover svg {
+        fill: #ffcc00;
+    }
+    
+    
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destination-card {
+    flex: 0 0 auto; /* การ์ดจะไม่ย่อ */
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    width: 300px; /* กำหนดขนาดของการ์ด */
+    height: 400px; /* กำหนดความสูงของการ์ด */
+    padding: 1; /* ลด padding เพื่อให้ภาพดูเต็ม */
+    scroll-snap-align: start; /* จัดตำแหน่ง snap ของการ์ด */
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+}
+
+.destination-card img {
+    width: 100%; /* ให้รูปภาพมีความกว้างเต็มการ์ด */
+    height: 60%; /* กำหนดความสูงเป็น 60% ของการ์ด */
+    object-fit: cover; /* จัดให้รูปภาพพอดีกับกรอบโดยไม่เสียสัดส่วน */
+    border-top-left-radius: 20px; /* จัดมุมโค้งให้ตรงกับการ์ด */
+    border-top-right-radius: 20px; /* จัดมุมโค้งให้ตรงกับการ์ด */
+}
+
+.destination-card:hover {
+    transform: scale(1.05); /* ซูมเข้า 5% */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเมื่อ Hover */
+}
+
+.destinations-grid, .shops-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.destination-card, .shop-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img, .shop-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.btn-edit {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btn-add {
+    background-color: #16a34a;
+    color: white;
+}
+
+.management-buttons .btn-edit:hover {
+    background-color: #1d4ed8;
+}
+
+.management-buttons .btn-delete:hover {
+    background-color: #ef4444;
+}
+
+.management-buttons .btn-add:hover {
+    background-color: #22c55e;
+}
+
+.footer {
+    background: #333; /* พื้นหลังสีเทาเข้ม */
+    border-top: 1px solid #000;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    width: 100%; /* ครอบคลุมเต็มหน้าจอ */
+    margin: 0; /* ลบระยะห่างขอบ */
+    box-sizing: border-box; /* รวม padding ใน width */
+    margin-top: 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; /* ใช้ความกว้างทั้งหมด */
+    max-width: 1200px; /* จำกัดความกว้างด้านใน */
+    margin: 0 auto; /* จัดให้ศูนย์กลาง */
+    padding: 0 20px; /* ระยะห่างด้านใน */
+}
+.footer-info, .footer-links, .footer-socials {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-info {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-links a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.footer-socials {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-socials a img {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
